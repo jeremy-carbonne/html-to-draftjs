@@ -158,7 +158,7 @@ function genFragment(
 }
 
 function getChunkForHTML(html: string, customChunkGenerator: ?CustomChunkGenerator): Object {
-  const sanitizedHtml = html.trim().replace(REGEX_NBSP, SPACE);
+  const sanitizedHtml = html.replace(REGEX_NBSP, SPACE);
   const safeBody = getSafeBodyFromHTML(sanitizedHtml);
   if (!safeBody) {
     return null;
